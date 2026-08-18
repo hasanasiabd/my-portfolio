@@ -12,8 +12,11 @@ export const metadata = {
   title: "Md. Hasan | Full-Stack Web Developer",
   description:
     "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
+  authors: [{ name: "Md. Hasan", url: siteUrl }],
+  creator: "Md. Hasan",
+  publisher: "Md. Hasan",
   icons: {
-    icon: "/logo.svg", // <-- এখানে 'public/' কেটে শুধুমাত্র '/logo.svg' হবে
+    icon: "/logo.svg",
   },
   keywords: [
     "Md Hasan",
@@ -30,21 +33,22 @@ export const metadata = {
     siteName: "Md. Hasan Portfolio",
     images: [
       {
-        url: "/og-image.png", // public/og-image.png ফাইলটিকে রেফার করবে
+        url: `${siteUrl}/og-image.png`, // Absolute URL যা LinkedIn শতভাগ রিড করতে পারবে
         width: 1200,
         height: 630,
         alt: "Md. Hasan Portfolio Preview",
       },
     ],
     locale: "en_US",
-    type: "website",
+    type: "profile", // পোর্টফোলিওর জন্য 'profile' বা 'website' পারফেক্ট
+    publishedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Md. Hasan | Full-Stack Web Developer",
     description:
       "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
-    images: ["/og-image.png"],
+    images: [`${siteUrl}/og-image.png`],
   },
 };
 

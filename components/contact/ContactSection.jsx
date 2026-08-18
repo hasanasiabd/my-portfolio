@@ -104,7 +104,7 @@ export default function ContactSection() {
               <div>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Email Me</p>
                 <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
-                  hasanasiabd12@gmail.com
+                  {personalData.socialLinks?.email.replace("mailto:", "")}
                 </p>
               </div>
             </a>

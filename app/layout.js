@@ -28,6 +28,14 @@ export const metadata = {
       "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
     url: siteUrl,
     siteName: "Md. Hasan Portfolio",
+    images: [
+      {
+        url: "/og-image.png", // public/og-image.png ফাইলটিকে রেফার করবে
+        width: 1200,
+        height: 630,
+        alt: "Md. Hasan Portfolio Preview",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -36,6 +44,7 @@ export const metadata = {
     title: "Md. Hasan | Full-Stack Web Developer",
     description:
       "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
+    images: ["/og-image.png"],
   },
 };
 

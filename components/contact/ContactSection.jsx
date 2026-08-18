@@ -1,9 +1,12 @@
+//components/contact/ContactSection.jsx
+
 "use client";
 
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import { personalData } from "@/data/portfolioData";
 
 // Custom Social Icons
@@ -31,14 +34,11 @@ const TwitterIcon = ({ size = 20 }) => (
 export default function ContactSection() {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null); // 'success' or 'error'
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus(null);
 
-    // .env.local ফাইল থেকে ভ্যালুগুলো নেওয়া হচ্ছে
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
@@ -48,12 +48,12 @@ export default function ContactSection() {
       .then(
         () => {
           setLoading(false);
-          setStatus("success");
+          toast.success("Message sent successfully! I will get back to you soon.");
           formRef.current.reset();
         },
         (error) => {
           setLoading(false);
-          setStatus("error");
+          toast.error("Failed to send message. Please try again.");
           console.error("EmailJS Error:", error);
         }
       );
@@ -183,17 +183,6 @@ export default function ContactSection() {
             >
               {loading ? "Sending..." : "Send Message"} <Send size={18} />
             </button>
-
-            {status === "success" && (
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-green-500/10 text-green-500 text-sm">
-                <CheckCircle size={18} /> Message sent successfully! I will get back to you soon.
-              </div>
-            )}
-            {status === "error" && (
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-red-500/10 text-red-500 text-sm">
-                <AlertCircle size={18} /> Failed to send message. Please try again.
-              </div>
-            )}
           </form>
         </motion.div>
       </div>

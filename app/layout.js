@@ -5,10 +5,14 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// সাইটের মূল ইউআরএল ডিফাইন করা হলো
+const siteUrl = "https://my-portfolio-hasanasiabd.vercel.app";
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Md. Hasan | Full-Stack Web Developer",
   description:
-    "Portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web tech.",
+    "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
   icons: {
     icon: "/logo.svg", // <-- এখানে 'public/' কেটে শুধুমাত্র '/logo.svg' হবে
   },
@@ -22,19 +26,26 @@ export const metadata = {
   openGraph: {
     title: "Md. Hasan | Full-Stack Web Developer",
     description:
-      "Explore my latest projects, technical skills, and web development journey.",
-    url: "https://my-portfolio-hasanasiabd.vercel.app/",
+      "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
+    url: siteUrl,
     siteName: "Md. Hasan Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: `${siteUrl}/og-image.png`, // Absolute URL যা লিঙ্কডইন সরাসরি পড়তে পারবে
         width: 1200,
         height: 630,
-        alt: "Md. Hasan Portfolio",
+        alt: "Md. Hasan Portfolio Preview",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md. Hasan | Full-Stack Web Developer",
+    description:
+      "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
+    images: [`${siteUrl}/og-image.png`],
   },
 };
 

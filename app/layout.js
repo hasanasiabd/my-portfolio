@@ -15,6 +15,7 @@ export const metadata = {
   authors: [{ name: "Md. Hasan", url: siteUrl }],
   creator: "Md. Hasan",
   publisher: "Md. Hasan",
+  
   icons: {
     icon: "/logo.svg",
   },

@@ -4,6 +4,12 @@ An interactive, responsive, and modern full-stack web developer portfolio built 
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[View Portfolio Website](https://my-portfolio-hasanasiabd.vercel.app/)**
+
+---
+
 ## ✨ Features
 
 - **⚡ Modern Stack:** Powered by Next.js 16 (App Router) & React 19.
@@ -30,15 +36,20 @@ An interactive, responsive, and modern full-stack web developer portfolio built 
 ```plaintext
 my-portfolio/
 ├── app/                  # App Router pages and global layouts
+│   ├── about/            # About page route (/about)
+│   ├── contact/          # Contact page route (/contact)
+│   ├── projects/         # Projects page route (/projects)
+│   ├── skills/           # Skills page route (/skills)
 │   ├── globals.css       # Tailwind CSS global styles
-│   ├── layout.js         # Root layout configuration
+│   ├── layout.js         # Root layout configuration (Navbar & Footer)
 │   └── page.js           # Main landing page
 ├── components/           # Reusable UI sections
-│   ├── about/            # About me section
-│   ├── contact/          # Contact section with EmailJS form
-│   ├── hero/             # Hero banner
+│   ├── about/            # About me section component
+│   ├── contact/          # Contact form component
+│   ├── hero/             # Hero banner component
+│   ├── navbar/           # Navigation bar component
 │   ├── projects/         # Featured projects showcase
-│   ├── skills/           # Tech stack skills
+│   ├── skills/           # Tech stack skills component
 │   └── ResumeSection.jsx # Qualifications & Resume timeline
 ├── public/               # Static assets & downloadable resume PDF
 └── .env.local            # Local environment keys (ignored by git)
@@ -64,3 +75,12 @@ cd my-portfolio
 
 # Install dependencies
 npm install
+```
+```bash
+# Run development server
+npm run dev
+```
+```bash
+# Build for production
+npm run build
+```

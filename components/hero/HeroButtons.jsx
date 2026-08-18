@@ -25,7 +25,7 @@ export default function HeroButtons() {
 
       {/* Static Asset Download Link */}
       <a
-        href="/resume.pdf"
+        href="/MD_HASAN_Resume.pdf"
         download="MD_HASAN_Resume.pdf"
         className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all font-medium"
       >

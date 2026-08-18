@@ -68,7 +68,7 @@ export const personalData = {
     facebook: "#"
   },
 
-  resumeLink: "/resume.pdf",
+  resumeLink: "/MD_HASAN_Resume.pdf",
 
   navLinks: [
     { name: "Home", href: "/" },

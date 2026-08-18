@@ -123,7 +123,7 @@ export default function ResumeSection() {
       {/* Download Action Bar */}
       <div className="mt-16 text-center">
         <a
-          href="/resume.pdf"
+          href="/MD_HASAN_Resume.pdf"
           download="MD_HASAN_Resume.pdf"
           className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:scale-105"
         >

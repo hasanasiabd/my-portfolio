@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +33,7 @@ export const metadata = {
       "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
     url: siteUrl,
     siteName: "Md. Hasan Portfolio",
-    publishedTime: "2026-01-01T00:00:00.000Z", // <-- এই যে প্রকাশিত সময় (ISO String)
+    publishedTime: "2026-01-01T00:00:00.000Z",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
@@ -56,11 +58,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-slate-50 dark:bg-gray-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen`}
+        className={`${inter.className} bg-slate-50 dark:bg-gray-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <Toaster position="bottom-right" reverseOrder={false} />
-          {children}
+          {/* Global Header */}
+          <Navbar />
+          
+          {/* Page Contents */}
+          <div className="flex-grow">{children}</div>
+          
+          {/* Global Footer */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

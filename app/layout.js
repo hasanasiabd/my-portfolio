@@ -15,7 +15,6 @@ export const metadata = {
   authors: [{ name: "Md. Hasan", url: siteUrl }],
   creator: "Md. Hasan",
   publisher: "Md. Hasan",
-  
   icons: {
     icon: "/logo.svg",
   },
@@ -32,17 +31,17 @@ export const metadata = {
       "Explore the professional portfolio of Md. Hasan, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and modern web application development.",
     url: siteUrl,
     siteName: "Md. Hasan Portfolio",
+    publishedTime: "2026-01-01T00:00:00.000Z", // <-- এই যে প্রকাশিত সময় (ISO String)
     images: [
       {
-        url: `${siteUrl}/og-image.png`, // Absolute URL যা LinkedIn শতভাগ রিড করতে পারবে
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Md. Hasan Portfolio Preview",
       },
     ],
     locale: "en_US",
-    type: "profile", // পোর্টফোলিওর জন্য 'profile' বা 'website' পারফেক্ট
-    publishedTime: new Date().toISOString(),
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",

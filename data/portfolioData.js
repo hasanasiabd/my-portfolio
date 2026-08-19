@@ -6,9 +6,9 @@ export const personalData = {
   bio: "I build fast, responsive, and modern web applications that deliver seamless user experiences and exceptional performance.",
   
   about: {
-    experienceYears: "2+",
+    experienceYears: "3+",
     title: "Passionate Web Developer Crafting Modern Digital Experiences",
-    description: "I have been working in web development for over 2 years. My primary goal is to build clean UI, high-performance, and scalable web applications that provide the ultimate user experience.",
+    description: "I have been working in web development for over 3 years. My primary goal is to build clean UI, high-performance, and scalable web applications that provide the ultimate user experience.",
     highlights: [
       "3+ Years of Web Development Experience",
       "Focus on Clean UI & High Performance",

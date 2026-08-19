@@ -10,7 +10,7 @@ export const personalData = {
     title: "Passionate Web Developer Crafting Modern Digital Experiences",
     description: "I have been working in web development for over 2 years. My primary goal is to build clean UI, high-performance, and scalable web applications that provide the ultimate user experience.",
     highlights: [
-      "2+ Years of Web Development Experience",
+      "3+ Years of Web Development Experience",
       "Focus on Clean UI & High Performance",
       "Building Scalable & Secure Web Applications",
       "Modern Frontend & Robust Backend Integration"

@@ -21,9 +21,21 @@ export default function ResumeSection() {
 
   const projects = [
     {
+      title: "Full-Stack Portfolio Website",
+      role: "Web Engineer",
+      year: "2024 - 2025",
+      desc: "Developed interactive personal web platforms with custom SVG graphics, optimized asset loading, and production-ready Vercel deployments."
+    },
+    {
+      title: "Modern Full-Stack Content Platform",
+      role: "Full-Stack Developer",
+      year: "2025",
+      desc: "Engineered an SEO-optimized publication platform featuring fast static generation, dynamic content management, and rich media support."
+    },
+    {
       title: "E-Commerce Web Application",
       role: "MERN Stack Specialist",
-      year: "2026",
+      year: "2025 - 2026",
       desc: "Designed dynamic data integration, modular RESTful APIs, dynamic shopping cart management, and JWT-based authentication."
     },
     {
@@ -32,18 +44,6 @@ export default function ResumeSection() {
       year: "2026",
       desc: "Built a high-performance admin portal with interactive data visualization, dynamic theme toggling, and role-based access control (RBAC)."
     },
-    {
-      title: "Modern Full-Stack Content Platform",
-      role: "Full-Stack Developer",
-      year: "2026",
-      desc: "Engineered an SEO-optimized publication platform featuring fast static generation, dynamic content management, and rich media support."
-    },
-    {
-      title: "Full-Stack Portfolio Website",
-      role: "Web Engineer",
-      year: "2026",
-      desc: "Developed interactive personal web platforms with custom SVG graphics, optimized asset loading, and production-ready Vercel deployments."
-    }
   ];
 
   return (

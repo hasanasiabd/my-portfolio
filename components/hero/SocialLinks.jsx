@@ -50,7 +50,7 @@ export default function SocialLinks() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="flex justify-center gap-4 pt-6"
+      className="flex justify-center lg:justify-start lg:pl-3 gap-4 pt-2 w-full"
     >
       {links.map((social, index) => {
         const Icon = social.icon;

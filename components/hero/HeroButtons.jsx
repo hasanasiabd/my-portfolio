@@ -12,7 +12,7 @@ export default function HeroButtons() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="flex flex-wrap justify-center gap-4 pt-4"
+      className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4 w-full"
     >
       {/* Internal Route Link */}
       <Link

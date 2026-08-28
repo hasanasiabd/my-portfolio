@@ -46,7 +46,7 @@ export const personalData = {
       title: "Task Management Web App",
       description: "An interactive productivity tool featuring dynamic drag-and-drop boards, user authentication, and real-time updates.",
       image: "/projects/taskmaster-preview.png", // ইমেজের সঠিক পাথ
-      tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
       github: "https://github.com/hasanasiabd/taskmaster-app",
       live: "https://taskmaster-app-pink.vercel.app"
     },

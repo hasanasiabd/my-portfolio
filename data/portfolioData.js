@@ -45,10 +45,10 @@ export const personalData = {
     {
       title: "Task Management Web App",
       description: "An interactive productivity tool featuring dynamic drag-and-drop boards, user authentication, and real-time updates.",
-      image: "https://images.unsplash.com/photo-1540355383394-62d0efe5be04?auto=format&fit=crop&q=80&w=800",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
-      liveLink: "#",
-      githubLink: "https://github.com/hasanasiabd"
+      image: "/projects/taskmaster-preview.png", // ইমেজের সঠিক পাথ
+      tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      github: "https://github.com/hasanasiabd/taskmaster-app",
+      live: "https://taskmaster-app-pink.vercel.app"
     },
     {
       title: "Modern Agency Portfolio",

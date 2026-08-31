@@ -62,10 +62,10 @@ export const personalData = {
 
   socialLinks: {
     github: "https://github.com/hasanasiabd",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/md-hasan-bd/",
     email: "mailto:litter-zoning-muck@duck.com",
-    twitter: "#",
-    facebook: "#"
+    twitter: "https://twitter.com/hasanasiabd",
+    facebook: "https://www.facebook.com/hasanasiabd"
   },
 
   resumeLink: "/MD_HASAN_Resume.pdf",

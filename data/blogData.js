@@ -1,4 +1,5 @@
 // data/blogData.js
+
 export const blogCategories = [
   {
     id: "getting-started",
@@ -36,10 +37,10 @@ export const blogCategories = [
           { slug: "variables", title: "What Are Variables?" },
           { slug: "functions", title: "What Is a Function?" },
           { slug: "arrays", title: "What Is an Array?" },
-          { slug: "map-method", title: "How Does map() Work?" },
-          { slug: "filter-method", title: "How Does filter() Work?" },
+          { slug: "map", title: "How Does map() Work?" },
+          { slug: "filter", title: "How Does filter() Work?" },
           { slug: "async-await", title: "Async/Await Explained" },
-          { slug: "fetch-api", title: "What Is fetch()?" }
+          { slug: "fetch", title: "What Is fetch()?" }
         ]
       },
       {
@@ -50,10 +51,47 @@ export const blogCategories = [
           { slug: "props", title: "What Are Props?" },
           { slug: "state", title: "What Is State?" },
           { slug: "usestate", title: "How Does useState() Work?" },
-          { slug: "useeffect", title: "What Is useEffect()?" },
-          { slug: "fetch-data", title: "How to Fetch Data in React" }
+          { slug: "use-effect", title: "What Is useEffect()?" },
+          { slug: "api-fetch", title: "How to Fetch Data in React" }
         ]
-      }
+      },
+      {
+        slug: "nextjs",
+        title: "Next.js Deep Dive",
+        articles: [
+          { slug: "introduction", title: "What Is Next.js?" },
+          { slug: "page", title: "What Is a Page in Next.js?" },
+          { slug: "layout", title: "What Is a Layout in Next.js?" },
+          { slug: "routing", title: "How Does Routing Work in Next.js?" },
+          { slug: "dynamic-routes", title: "What Are Dynamic Routes?" },
+          { slug: "server-component", title: "What Is a Server Component?" },
+          { slug: "client-component", title: "What Is a Client Component?" },
+          { slug: "data-fetching", title: "How Does Data Fetching Work in Next.js?" },
+          { slug: "api-routes", title: "What Are API Routes?" }
+        ]
+      },
+      {
+  slug: "nodejs",
+  title: "Node.js",
+  articles: [
+    {
+      slug: "introduction",
+      title: "What Is Node.js? The Story of Using JavaScript on the Server"
+    },
+    {
+      slug: "server",
+      title: "How Does a Node.js Server Work? Understanding Client and Server Communication"
+    },
+    {
+      slug: "modules",
+      title: "What Are Node.js Modules? Breaking Large Code into Smaller Pieces"
+    },
+    {
+      slug: "http",
+      title: "What Is HTTP? How Browsers and Servers Communicate"
+    }
+  ]
+}
     ]
   },
   {

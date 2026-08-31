@@ -1,3 +1,5 @@
+// components/documentation/what-i-know/react/components.jsx
+
 import React from "react";
 
 export default function ReactComponentsStory() {

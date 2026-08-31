@@ -1,4 +1,5 @@
 // app/blog/[category]/[topic]/[slug]/page.js
+
 "use client";
 
 import React, { useState, use } from "react";

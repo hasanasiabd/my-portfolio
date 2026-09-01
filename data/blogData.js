@@ -38,7 +38,7 @@ export const blogCategories = [
     ],
   },
 
-  // =========================================================
+  // ==============WHAT I KNOW================================
   // WHAT I KNOW
   // =========================================================
 
@@ -50,6 +50,7 @@ export const blogCategories = [
       "Core concepts of Web Development, JS, React & Modern Web.",
 
     topics: [
+
       // -----------------------------------------------------
       // JAVASCRIPT
       // -----------------------------------------------------
@@ -460,9 +461,14 @@ export const blogCategories = [
       "Real-world debugging, algorithmic thinking, and bugs fixed.",
 
     topics: [
+
+      // -----------------------------------------------------
+      // BUGS
+      // -----------------------------------------------------
+
       {
         slug: "bugs",
-        title: "My Bugs and How I Fixed Them",
+        title: "Common Bugs and How I Fixed",
 
         articles: [
           {
@@ -475,17 +481,120 @@ export const blogCategories = [
           }
         ],
       },
-      {
-        slug: "debugging",
-        title: "Common Fixes",
 
-        articles: [
-          {
-            slug: "hydration-error",
-            title: "Fixing Next.js Hydration Error",
-          },
-        ],
-      },
+      // -----------------------------------------------------
+      // ERRORS
+      // -----------------------------------------------------
+
+      {
+      slug: "errors",
+      title: "Common Errors",
+      articles: [
+        {
+          slug: "next-api-500-error",
+          title: "My Next.js API Was Returning a 500 Error — How I Found and Fixed It"
+        },
+        {
+          slug: "module-not-found",
+          title: "Module Not Found Error — The File Was There, So What Went Wrong?"
+        },
+        {
+          slug: "build-error",
+          title: "My Next.js Project Wouldn't Build — How I Tracked Down the Error"
+        }
+      ]
+    },
+
+    // -----------------------------------------------------
+    // DATABASE PROBLEMS
+    // -----------------------------------------------------
+    {
+      slug: "database-problems",
+      title: "Database Problems",
+      articles: [
+        {
+          slug: "postgres-connection-error",
+          title: "PostgreSQL Wouldn't Connect — Finding the Real Cause of the Connection Error"
+        },
+        {
+          slug: "wrong-database-url",
+          title: "My DATABASE_URL Was Wrong — How I Found and Fixed the Connection Problem"
+        },
+        {
+          slug: "slow-query",
+          title: "My Database Query Was Too Slow — How I Improved Its Performance"
+        }
+      ]
+    },
+
+    // -----------------------------------------------------
+    // API PROBLEMS
+    // -----------------------------------------------------
+
+    {
+      slug: "api-problems",
+      title: "API Problems",
+      articles: [
+        {
+          slug: "fetch-failed",
+          title: "fetch() Failed Even Though the API Was Working — What Went Wrong?"
+        },
+        {
+          slug: "api-not-found",
+          title: "My API Was Returning 404 — How I Found the Wrong Route"
+        },
+        {
+          slug: "api-500-error",
+          title: "My API Was Returning a 500 Error — How I Found the Backend Problem"
+        }
+      ]
+    },
+
+    // -----------------------------------------------------
+    // AUTHENTICATION PROBLEMS
+    // -----------------------------------------------------
+
+    {
+      slug: "authentication",
+      title: "Authentication Problems",
+      articles: [
+        {
+          slug: "login-not-working",
+          title: "My Login Wasn't Working — Finding the Mistake Step by Step"
+        },
+        {
+          slug: "jwt-error",
+          title: "I Kept Getting a JWT Error — How I Fixed the Token Problem"
+        },
+        {
+          slug: "session-error",
+          title: "The User Session Kept Disappearing — How I Solved It"
+        }
+      ]
+    },
+
+    // -----------------------------------------------------
+    // DEPLOYMENT PROBLEMS
+    // -----------------------------------------------------
+    
+    {
+      slug: "deployment",
+      title: "Deployment Problems",
+      articles: [
+        {
+          slug: "vercel-build-error",
+          title: "It Worked Locally but Failed on Vercel — What Was Different?"
+        },
+        {
+          slug: "env-not-working",
+          title: "My Environment Variables Worked Locally but Not After Deployment"
+        },
+        {
+          slug: "deployment-failed",
+          title: "My Project Wouldn't Deploy — How I Found and Fixed the Problem"
+        }
+      ]
+    }
     ],
   },
 
@@ -494,24 +603,108 @@ export const blogCategories = [
   // =========================================================
 
   {
-    id: "case-studies",
+    id: "project-case-studies",
     title: "Project Case Studies",
     icon: "💼",
-    description:
-      "Architecture breakdown of practical full-stack projects.",
-
+    description: "Real projects, architecture decisions, development journeys, and lessons learned.",
     topics: [
-      {
-        slug: "ecommerce",
-        title: "E-Commerce Architecture",
 
+      // -----------------------------------------------------
+      // E-COMMERCE
+      // -----------------------------------------------------
+
+      {
+        slug: "e-commerce",
+        title: "E-Commerce Platform",
         articles: [
           {
-            slug: "auth-flow",
-            title: "JWT & Dynamic Cart State",
+            slug: "overview",
+            title: "How I Planned and Built an E-Commerce Platform from Scratch"
           },
-        ],
+          {
+            slug: "database",
+            title: "How I Designed the Database for Products, Users, and Orders"
+          },
+          {
+            slug: "authentication",
+            title: "How I Built Authentication for My E-Commerce Platform"
+          },
+          {
+            slug: "api",
+            title: "How I Connected the E-Commerce Frontend, API, and Database"
+          },
+          {
+            slug: "problems",
+            title: "The Problems I Faced While Building My E-Commerce Platform"
+          }
+        ]
       },
-    ],
-  },
+
+      // -----------------------------------------------------
+      // TASK MANAGEMENT
+      // -----------------------------------------------------
+
+      {
+        slug: "task-management",
+        title: "Task Management App",
+        articles: [
+          {
+            slug: "overview",
+            title: "How I Built a Task Management Application from Scratch"
+          },
+          {
+            slug: "database",
+            title: "How I Designed the Database for My Task Management App"
+          },
+          {
+            slug: "api",
+            title: "How I Built APIs for Creating, Updating, and Deleting Tasks"
+          },
+          {
+            slug: "problems",
+            title: "The Problems I Faced While Building My Task Management App"
+          }
+        ]
+      },
+
+      // -----------------------------------------------------
+      // ADMIN DASHBOARD
+      // -----------------------------------------------------
+
+      {
+        slug: "admin-dashboard",
+        title: "Admin Dashboard",
+        articles: [
+          {
+            slug: "overview",
+            title: "How I Built an Admin Dashboard for Managing Application Data"
+          },
+          {
+            slug: "database",
+            title: "How I Designed the Database Behind My Admin Dashboard"
+          },
+          {
+            slug: "problems",
+            title: "The Problems I Faced While Building My Admin Dashboard"
+          }
+        ]
+      },
+
+      
+      // -----------------------------------------------------
+      // OTHER PROJECTS
+      // -----------------------------------------------------
+
+      {
+      slug: "other-projects",
+      title: "Other Projects",
+      articles: [
+        {
+          slug: "overview",
+          title: "My Other Projects: From Ideas to Real-World Applications"
+        }
+      ]
+      }
+    ]
+  }
 ];

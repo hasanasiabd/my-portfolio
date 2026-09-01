@@ -1,0 +1,366 @@
+export default function MapNotWorkingArticle() {
+  return (
+    <article className="prose prose-invert max-w-none">
+      {/* Header */}
+      <header className="mb-10">
+        <div className="mb-3 inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-sm text-amber-300">
+          Problem Solving · JavaScript
+        </div>
+
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          Why Was map() Not Working Even Though My Data Was Correct?
+        </h1>
+
+        <p className="mt-4 text-lg leading-8 text-slate-400">
+          The data looked correct. The API returned successfully. The console
+          showed something that looked like an array. And yet...{" "}
+          <code>map()</code> refused to cooperate.
+        </p>
+      </header>
+
+      {/* Story */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          🍽️ The Restaurant Story
+        </h2>
+
+        <p>Imagine you work as a waiter in a busy restaurant.</p>
+
+        <p>Your manager gives you an instruction:</p>
+
+        <blockquote className="border-l-4 border-indigo-500 pl-5 italic text-slate-300">
+          “Take this list and give one plate to every person.”
+        </blockquote>
+
+        <p>Easy, right?</p>
+
+        <p>You look at the paper in your hand and start walking toward the tables.</p>
+
+        <p>But there is one problem.</p>
+
+        <p>
+          The paper is not a list of people. It is actually the restaurant's menu.
+        </p>
+
+        <p>You look at the manager and say:</p>
+
+        <blockquote className="border-l-4 border-rose-500 pl-5 italic text-slate-300">
+          “But the information is correct!”
+        </blockquote>
+
+        <p>The manager replies:</p>
+
+        <blockquote className="border-l-4 border-emerald-500 pl-5 italic text-slate-300">
+          “I know. But it isn't the kind of data I asked you to process.”
+        </blockquote>
+
+        <p>
+          And that is exactly the kind of confusion that can happen with{" "}
+          <code>map()</code>.
+        </p>
+      </section>
+
+      {/* Problem */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          💥 The Error
+        </h2>
+
+        <p>Suppose the API returns:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hasan"
+    },
+    {
+      "id": 2,
+      "name": "Rahim"
+    }
+  ]
+}`}</code>
+        </pre>
+
+        <p>The developer sees the response and thinks:</p>
+
+        <blockquote className="border-l-4 border-amber-500 pl-5 italic text-slate-300">
+          “There are users here. So I can map it.”
+        </blockquote>
+
+        <p>Then:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`data.map((user) => (
+  <div key={user.id}>
+    {user.name}
+  </div>
+))`}</code>
+        </pre>
+
+        <p>And JavaScript responds:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`TypeError: data.map is not a function`}</code>
+        </pre>
+
+        <p>This is where I used to think:</p>
+
+        <blockquote className="border-l-4 border-rose-500 pl-5 italic text-slate-300">
+          “But the data is correct! Why is map() broken?”
+        </blockquote>
+      </section>
+
+      {/* The truth */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          🧠 The Important Truth
+        </h2>
+
+        <p>
+          <code>map()</code> is not broken.
+        </p>
+
+        <p>
+          The problem is that <code>data</code> is an object.
+        </p>
+
+        <p>The actual array is here:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`data.users`}</code>
+        </pre>
+
+        <p>So the correct code is:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`data.users.map((user) => (
+  <div key={user.id}>
+    {user.name}
+  </div>
+))`}</code>
+        </pre>
+      </section>
+
+      {/* Analogy */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          📦 The Box Analogy
+        </h2>
+
+        <p>Think of the API response as a box.</p>
+
+        <div className="my-6 rounded-2xl border border-slate-700 bg-slate-900/60 p-6">
+          <p className="text-center text-lg font-semibold text-white">
+            📦 API Response
+          </p>
+
+          <div className="mt-5 rounded-xl bg-slate-950 p-5">
+            <p className="m-0 text-center text-slate-300">
+              users → 👤 👤 👤
+            </p>
+          </div>
+        </div>
+
+        <p>
+          The box itself is not a list of users. The <code>users</code> property
+          contains the list.
+        </p>
+
+        <p>If you tell JavaScript:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`box.map(...)`}</code>
+        </pre>
+
+        <p>JavaScript basically says:</p>
+
+        <blockquote className="border-l-4 border-indigo-500 pl-5 italic text-slate-300">
+          “You gave me a box. I need an array.”
+        </blockquote>
+
+        <p>But if you give it:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`box.users.map(...)`}</code>
+        </pre>
+
+        <p>Now JavaScript has the actual list.</p>
+      </section>
+
+      {/* Another common case */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          ⚠️ Another Common Trap: The Data Is Not Ready Yet
+        </h2>
+
+        <p>
+          There is another version of this problem that happens frequently in React.
+        </p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`const [users, setUsers] = useState();
+
+return (
+  <div>
+    {users.map((user) => (
+      <p key={user.id}>{user.name}</p>
+    ))}
+  </div>
+);`}</code>
+        </pre>
+
+        <p>The first render happens before the API response arrives.</p>
+
+        <p>
+          So <code>users</code> is initially <code>undefined</code>.
+        </p>
+
+        <p>
+          And <code>undefined.map()</code> obviously cannot work.
+        </p>
+
+        <p>A safer initial value is:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`const [users, setUsers] = useState([]);`}</code>
+        </pre>
+
+        <p>
+          Now the first render gets an empty array. An empty array can safely be
+          mapped.
+        </p>
+      </section>
+
+      {/* Debugging */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          🔍 How I Debug map() Problems Now
+        </h2>
+
+        <p>Instead of immediately changing the code, I inspect the actual value.</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`console.log("data:", data);
+console.log("isArray:", Array.isArray(data));`}</code>
+        </pre>
+
+        <p>If the result is:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`isArray: false`}</code>
+        </pre>
+
+        <p>
+          I know that <code>data</code> itself is not the array I need.
+        </p>
+
+        <p>Then I inspect its structure:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`console.log(Object.keys(data));`}</code>
+        </pre>
+
+        <p>Maybe I discover:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`["users", "total", "page"]`}</code>
+        </pre>
+
+        <p>
+          Now the mystery is gone. The array is probably <code>data.users</code>.
+        </p>
+      </section>
+
+      {/* Different API shapes */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white">
+          🧩 API Shapes Matter
+        </h2>
+
+        <p>
+          Different APIs can return the same information in different structures.
+        </p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`// Shape 1
+[
+  { id: 1, name: "Hasan" },
+  { id: 2, name: "Rahim" }
+]`}</code>
+        </pre>
+
+        <p>Here, you can directly use:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`data.map(...)`}</code>
+        </pre>
+
+        <p>But another API may return:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`{
+  "data": [
+    { "id": 1, "name": "Hasan" },
+    { "id": 2, "name": "Rahim" }
+  ],
+  "total": 2
+}`}</code>
+        </pre>
+
+        <p>In that case:</p>
+
+        <pre className="overflow-x-auto rounded-xl bg-slate-950 p-5">
+          <code>{`data.data.map(...)`}</code>
+        </pre>
+
+        <p>
+          Looks weird, but it is correct for that particular response shape.
+        </p>
+      </section>
+
+      {/* Final lesson */}
+      <section>
+        <h2 className="text-2xl font-bold text-white">
+          💡 What I Learned
+        </h2>
+
+        <p>The most important lesson was simple:</p>
+
+        <div className="my-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6">
+          <p className="m-0 text-center text-lg font-semibold text-emerald-300">
+            “Correct data” does not necessarily mean “correct data type or shape.”
+          </p>
+        </div>
+
+        <p>
+          When <code>map()</code> fails, don't immediately blame React,
+          JavaScript, or the API.
+        </p>
+
+        <p>Stop for a second and ask:</p>
+
+        <ol className="list-decimal space-y-2 pl-5 text-slate-300">
+          <li>What exactly is this value?</li>
+          <li>Is it actually an array?</li>
+          <li>Where is the array inside this response?</li>
+          <li>Could the value still be undefined during the first render?</li>
+          <li>What does the API response actually look like?</li>
+        </ol>
+
+        <blockquote className="border-l-4 border-indigo-500 pl-5 text-slate-300">
+          Debugging becomes much easier when you stop guessing what the data is
+          and start inspecting what the data actually is.
+        </blockquote>
+
+        <div className="mt-6 rounded-2xl border border-indigo-500/30 bg-indigo-500/10 p-6">
+          <p className="m-0 font-semibold text-indigo-300">
+            Before asking “Why doesn't map() work?”, ask: “What exactly am I
+            giving map()?”
+          </p>
+        </div>
+      </section>
+    </article>
+  );
+}
